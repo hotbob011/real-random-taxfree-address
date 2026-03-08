@@ -362,3 +362,50 @@ address-generator, random-address, fake-address, tax-free-state, real-address, r
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 💰 Support & Data Services
+
+
+### Cryptocurrency Donations
+
+You can also support us via cryptocurrency:
+
+**Ethereum / USDT (ERC-20):**
+```
+0x6Df562A8B669bf90EAe5ccB0E0440eb9DF237E4e
+```
+
+**USDT (TRC-20):**
+```
+TYz2SP7GtL84t14CeL7tnhHLgeako3haHW
+```
+
+> **Note**: Cryptocurrency donations are non-refundable. Please double-check the address before sending.
+
+### 📊 Enterprise Data Services & Licensing
+
+**Looking for enterprise-grade address datasets?**
+
+We provide professional data curation and licensing services for teams and organizations that require production-ready test datasets:
+
+**Available Services:**
+- ✅ **Commercial Data Licensing** - Licensed access to curated address datasets (70,000+ US addresses, including all 5 tax-free states)
+- ✅ **Multi-Region Data Packages** - Datasets for Hong Kong, UK, Canada, Japan, India, Taiwan, Singapore, Germany, and more
+- ✅ **Custom Data Formatting** - Pre-formatted JSON/CSV files ready for immediate integration with this engine
+- ✅ **Ongoing Data Maintenance** - Quarterly updates and data refresh services
+- ✅ **Enterprise Support** - Technical support and integration assistance
+
+**Service Deliverables:**
+- Clean, structured data files matching the engine's expected format
+- Addresses verified against official postal standards
+- Organized by country/region for seamless integration
+- Complete documentation and integration examples
+- Dedicated support for enterprise customers
+
+**Interested in our data services?**
+- 📧 Email: [jietoushiren01@gmail.com](mailto:jietoushiren01@gmail.com) (Subject: "Enterprise Data Services Inquiry")
+
+
+> **Important**: All datasets are test data only, randomly generated and do not correspond to real individuals or addresses. Suitable for development, testing, and QA purposes only. Not for real-world transactions or fraudulent activities.
