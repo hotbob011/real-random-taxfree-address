@@ -9,7 +9,9 @@
 [![Privacy](https://img.shields.io/badge/Privacy-First-brightgreen)]()
 
 > This repository contains the open-source **frontend core engine** of MockAddress, for generating authentic-format test addresses and MAC address data across multiple countries/regions.  
-> Full production site: <https://mockaddress.com/>
+> Full production site: <https://mockaddress.com/>  
+> 
+> 🇨🇳 **中文用户请查看：[README_CN.md](./README_CN.md)（中文文档）**
 
 ![mockaddress Example image from the homepage of the US Tax-Free State Address Generator.](en.png)
 
