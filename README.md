@@ -1,4 +1,4 @@
-# MockAddress Core: Frontend Address & MAC Test Data Engine (Open Source Core)
+# Real Random US Tax-Free State Address Generator
 
 > This repository contains the open-source **frontend core engine** of MockAddress, for generating authentic-format test addresses and MAC address data across multiple countries/regions.  
 > Full production site: <https://mockaddress.com/>
