@@ -9,9 +9,11 @@
 [![Privacy](https://img.shields.io/badge/隐私-优先-brightgreen)]()
 
 > 本仓库包含 MockAddress 的**开源前端核心引擎**，用于生成跨多个国家/地区的真实格式测试地址和 MAC 地址数据。  
-> 完整生产环境网站：<https://mockaddress.com/>
+> 完整生产环境网站：<https://mockaddress.com/>  
+> 
+> 🇬🇧 **English users please see: [README_EN.md](./README_EN.md) (English Documentation)**
 
-![mockaddress 美国免税州地址生成器首页示例图片](en.png)
+![mockaddress 美国免税州地址生成器首页示例图片](cn.png)
 
 ## 项目简介
 
@@ -360,3 +362,53 @@ address-generator, random-address, fake-address, tax-free-state, real-address, r
 ## License
 
 本项目采用 MIT 许可证 - 详见 [LICENSE](LICENSE) 文件。
+
+---
+
+## 💰 支持与数据服务
+
+
+
+### 加密货币打赏
+
+你也可以通过加密货币支持我们：
+
+**Ethereum / USDT (ERC-20):**
+```
+0x6Df562A8B669bf90EAe5ccB0E0440eb9DF237E4e
+```
+
+**USDT (TRC-20):**
+```
+TYz2SP7GtL84t14CeL7tnhHLgeako3haHW
+```
+
+> **注意**：加密货币打赏不可退款，请确认地址无误后再发送。
+
+
+### 📊 企业级数据服务与授权
+
+**需要企业级地址数据集？**
+
+我们为团队和组织提供专业的数据整理与授权服务，满足生产环境对高质量测试数据集的需求：
+
+**服务内容：**
+- ✅ **商业数据授权** - 提供经过专业整理的地址数据集授权（70,000+ 美国地址，包含全部 5 个免税州：阿拉斯加、特拉华、蒙大拿、新罕布什尔、俄勒冈）
+- ✅ **多地区数据包** - 涵盖香港、英国、加拿大、日本、印度、台湾、新加坡、德国等多个国家/地区的数据集
+- ✅ **定制化数据格式化** - 预格式化的 JSON/CSV 文件，可直接与本引擎配合使用，无需额外处理
+- ✅ **持续数据维护** - 每季度数据更新与刷新服务，确保数据时效性
+- ✅ **企业级技术支持** - 提供技术支持和集成协助
+
+**服务交付：**
+- 📦 干净、结构化的数据文件，完全符合引擎预期格式
+- 📦 符合官方邮政标准的地址数据，可在 Google Maps / Apple Maps 验证
+- 📦 按国家/地区组织，便于快速集成
+- 📦 完整的文档和集成示例代码
+- 📦 企业客户专属技术支持
+
+**咨询企业数据服务：**
+- 📧 邮箱：[jietoushiren01@gmail.com](mailto:jietoushiren01@gmail.com)（邮件主题请注明"企业数据服务咨询"）
+
+
+
+> **重要提示**：所有数据集均为测试数据，随机生成，不对应任何真实个人或地址。仅适用于开发、测试和 QA 用途。不得用于真实交易或欺诈活动。
