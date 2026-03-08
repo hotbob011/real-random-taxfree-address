@@ -3,6 +3,10 @@
 > This repository contains the open-source **frontend core engine** of MockAddress, for generating authentic-format test addresses and MAC address data across multiple countries/regions.  
 > Full production site: <https://mockaddress.com/>
 
+![mockaddress Example image from the homepage of the US Fire State Address Generator.
+](https://github.com/hotbob011/real-random-taxfree-address/blob/main/en.pn)
+
+
 ## Project Overview
 
 MockAddress Core is a **pure frontend, zero backend dependency** test data engine designed for developers and QA engineers, providing:
