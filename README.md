@@ -365,7 +365,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-## 💰 Support & Data Services
+## 💰 Support & Technical Services
 
 
 ### Cryptocurrency Donations
@@ -388,8 +388,8 @@ TYz2SP7GtL84t14CeL7tnhHLgeako3haHW
 
 > **Note**: Cryptocurrency donations are non-refundable. Please double-check the address before sending.
 
-### 📊 Data Services Support
+### 📊 Technical Services Support
 
-Need data support for your project? Feel free to contact us for paid services and technical assistance.
+Need technical support for your project? Feel free to contact us for paid services and technical assistance.
 
 📧 Email: [jietoushiren01@gmail.com](mailto:jietoushiren01@gmail.com)
