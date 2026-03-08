@@ -197,6 +197,146 @@ console.log(csv);
 console.log(json);
 ```
 
+### 在本机离线运行（仅自己使用，无需联网）
+
+如果你和我一样，希望**只在自己的电脑上独享数据，不依赖任何外网服务器**，可以把整个 MockAddress Core 当成一个纯静态站点，在本机用一个简单的 HTTP 服务跑起来：
+
+- 我的开发环境是 Windows 电脑，安装了：  
+  - 一个现代浏览器（Chrome / Edge 等）  
+  - Python / PHP / Node.js（至少其一，实际我三者都装了）  
+- 仓库代码放在本地某个目录，比如：`D:\mockaddress-core\`。  
+- 在项目根目录新建一个 `start-local-server.bat`，内容如下，一键启动本地服务器并自动打开浏览器访问 `http://localhost:8000`：
+
+```bat
+@echo off
+
+echo Starting local server...
+
+echo.
+
+REM Check if Python 3 is available
+
+python --version >nul 2>&1
+
+if %errorlevel% equ 0 (
+
+    python -c "import sys; sys.exit(0 if sys.version_info >= (3, 0) else 1)" >nul 2>&1
+
+    if %errorlevel% equ 0 (
+
+        echo Found Python 3
+
+        echo Starting server on http://localhost:8000
+
+        echo Press Ctrl+C to stop
+
+        echo.
+
+        timeout /t 2 /nobreak >nul
+
+        start http://localhost:8000
+
+        python -m http.server 8000
+
+        exit /b 0
+
+    )
+
+)
+
+REM Check if Python 2 is available
+
+python --version >nul 2>&1
+
+if %errorlevel% equ 0 (
+
+    python -c "import sys; sys.exit(0 if sys.version_info < (3, 0) else 1)" >nul 2>&1
+
+    if %errorlevel% equ 0 (
+
+        echo Found Python 2
+
+        echo Starting server on http://localhost:8000
+
+        echo Press Ctrl+C to stop
+
+        echo.
+
+        timeout /t 2 /nobreak >nul
+
+        start http://localhost:8000
+
+        python -m SimpleHTTPServer 8000
+
+        exit /b 0
+
+    )
+
+)
+
+REM Check if PHP is available
+
+php --version >nul 2>&1
+
+if %errorlevel% equ 0 (
+
+    echo Found PHP
+
+    echo Starting server on http://localhost:8000
+
+    echo Press Ctrl+C to stop
+
+    echo.
+
+    timeout /t 2 /nobreak >nul
+
+    start http://localhost:8000
+
+    php -S localhost:8000
+
+    exit /b 0
+
+)
+
+REM Check if Node.js is available
+
+where npx >nul 2>&1
+
+if %errorlevel% equ 0 (
+
+    echo Found Node.js
+
+    echo Starting server on http://localhost:8000
+
+    echo Press Ctrl+C to stop
+
+    echo.
+
+    timeout /t 2 /nobreak >nul
+
+    start http://localhost:8000
+
+    npx --yes http-server -p 8000
+
+    exit /b 0
+
+)
+
+echo Error: No server found
+
+echo Please install Python, PHP, or Node.js
+
+pause
+
+exit /b 1
+```
+
+运行方式：
+
+- 双击 `start-local-server.bat`，脚本会依次尝试 Python 3 → Python 2 → PHP → Node.js，找到可用环境后自动启动本地服务器。  
+- 浏览器会自动打开 `http://localhost:8000`，此时**所有地址生成逻辑、包括美国地址生成器、香港中英文地址生成器等，全部只在你自己电脑本地运行，不依赖互联网**。  
+- 这种方式非常适合**内网环境**或对隐私/合规要求较高的团队。
+
 详细使用说明请参考 [`使用说明.md`](./使用说明.md)。
 
 你也可以参考我们的生产站点 <https://mockaddress.com/> 查看真实使用场景和 UI 设计，然后在自己的项目中按需定制。
