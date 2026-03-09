@@ -529,18 +529,7 @@ TYz2SP7GtL84t14CeL7tnhHLgeako3haHW
 
 > **注意**：加密货币打赏不可退款，请确认地址无误后再发送。
 
-## 国内用户推荐：更快访问镜像仓库
 
-本仓库为 GitHub 主仓库，国内访问可能较慢。  
-推荐使用以下国内镜像（内容自动/定期同步，速度更快）：
-
-- **GitCode 镜像**（CSDN 平台）：https://gitcode.com/jietoushiren01/real-random-taxfree-address  
-  （适合国内开发者，访问稳定）
-
-所有更新以 **GitHub 主仓库** 为准，建议优先 Star / Fork / PR 这里。  
-镜像仅作加速与备份使用，如有问题请在 GitHub 提交 Issue。🚀🇨🇳
-
-**重要声明** ⚠️：本工具仅限测试、开发、QA、教育用途。严禁用于违法注册、欺诈等行为，所有生成数据均为虚构模拟。
 
 
 ### 📊 技术服务支持
@@ -548,5 +537,6 @@ TYz2SP7GtL84t14CeL7tnhHLgeako3haHW
 需要建站的技术和内容支持？欢迎随时联系我们，提供付费服务与技术协助。
 
 📧 邮箱：[jietoushiren01@gmail.com](mailto:jietoushiren01@gmail.com)
+
 
 
