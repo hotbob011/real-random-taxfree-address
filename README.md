@@ -528,6 +528,19 @@ TYz2SP7GtL84t14CeL7tnhHLgeako3haHW
 
 > **Note**: Cryptocurrency donations are non-refundable. Please double-check the address before sending.
 
+## For users in China: Faster Mirror Repository
+
+This is the main GitHub repository. Access might be slower in China.  
+Recommended faster mirrors (content synced periodically):
+
+- **GitCode Mirror** (CSDN platform): https://gitcode.com/jietoushiren01/real-random-taxfree-address  
+  (Stable and fast access in mainland China)
+
+All updates and official releases are on **GitHub**. Please Star / Fork / Issue / PR here.  
+Mirrors are for acceleration and backup only. Report issues on GitHub. 🚀
+
+**Important Disclaimer** ⚠️: For testing, development, QA, and educational purposes only. Strictly prohibited for illegal registration, fraud, or any misconduct. All generated data is fictional and simulated.
+
 ### 📊 Technical Services Support
 
 Need technical support for your project? Feel free to contact us for paid services and technical assistance.
