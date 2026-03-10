@@ -1051,12 +1051,13 @@ export async function generateIdentityInfo(address) {
     }
     
     // Use the same name group as the address based on country
+    const c = address.country || '';
     let nameGroup;
-    if (address.country === '香港' || address.country === '台灣') {
+    if (c === '香港' || c === '台灣' || c === 'HK' || c === 'TW') {
       nameGroup = namesData.nameGroups.chinese;
-    } else if (address.country === '印度') {
+    } else if (c === '印度' || c === 'IN') {
       nameGroup = namesData.nameGroups.indian;
-    } else if (address.country === '日本') {
+    } else if (c === '日本' || c === 'JP') {
       nameGroup = namesData.nameGroups.asian || namesData.nameGroups.western;
     } else {
       // Default to western names for US, UK, Canada, etc.
@@ -1125,14 +1126,14 @@ export async function generateIdentityInfo(address) {
     let ssn;
     const country = address.country || '';
     
-    if (country.includes('德国') || country.includes('Germany')) {
+    if (country.includes('德国') || country.includes('Germany') || country === 'DE') {
       // Generate German Steuer-ID (Tax ID): 11 digits, format: XX XXX XXX XXX
       const part1 = randomInt(10, 99);
       const part2 = randomInt(100, 999);
       const part3 = randomInt(100, 999);
       const part4 = randomInt(100, 999);
       ssn = `${part1} ${part2} ${part3} ${part4}`;
-    } else if (country.includes('英国') || country.includes('UK') || country.includes('United Kingdom')) {
+    } else if (country.includes('英国') || country.includes('UK') || country.includes('United Kingdom') || country === 'UK') {
       // Generate UK NINO: Format: AA 12 34 56 A
       const letters1 = 'ABCDEFGHJKLMNOPRSTUVWXYZ';
       const letters2 = 'ABCDEFGHJKLMNOPRSTUVWXYZ';
@@ -1141,25 +1142,25 @@ export async function generateIdentityInfo(address) {
       const digits = randomInt(100000, 999999);
       const letter3 = randomElement(letters2.split(''));
       ssn = `${letter1}${letter2} ${digits.toString().slice(0, 2)} ${digits.toString().slice(2, 4)} ${digits.toString().slice(4, 6)} ${letter3}`;
-    } else if (country.includes('加拿大') || country.includes('Canada')) {
+    } else if (country.includes('加拿大') || country.includes('Canada') || country === 'CA') {
       // Generate Canadian SIN: Format: XXX XXX XXX
       const sin1 = randomInt(100, 999);
       const sin2 = randomInt(100, 999);
       const sin3 = randomInt(100, 999);
       ssn = `${sin1} ${sin2} ${sin3}`;
-    } else if (country.includes('日本') || country.includes('Japan')) {
+    } else if (country.includes('日本') || country.includes('Japan') || country === 'JP') {
       // Generate Japanese My Number: Format: XXXX-XXXX-XXXX
       const myNum1 = randomInt(1000, 9999);
       const myNum2 = randomInt(1000, 9999);
       const myNum3 = randomInt(1000, 9999);
       ssn = `${myNum1}-${myNum2}-${myNum3}`;
-    } else if (country.includes('印度') || country.includes('India')) {
+    } else if (country.includes('印度') || country.includes('India') || country === 'IN') {
       // Generate Indian Aadhaar: Format: XXXX XXXX XXXX
       const aadhaar1 = randomInt(1000, 9999);
       const aadhaar2 = randomInt(1000, 9999);
       const aadhaar3 = randomInt(1000, 9999);
       ssn = `${aadhaar1} ${aadhaar2} ${aadhaar3}`;
-    } else if (country.includes('香港') || country.includes('Hong Kong')) {
+    } else if (country.includes('香港') || country.includes('Hong Kong') || country === 'HK') {
       // Generate Hong Kong ID Card: Format: A123456(7) or AB123456(7)
       // 70%概率单字母，30%概率双字母
       const letters = 'ABCDEFGHJKLMNPQRSTUVWXYZ';
@@ -1175,7 +1176,7 @@ export async function generateIdentityInfo(address) {
       const digits = randomInt(100000, 999999).toString();
       const checkDigit = randomInt(0, 9);
       ssn = `${prefix}${digits}(${checkDigit})`;
-    } else if (country.includes('台灣') || country.includes('台湾') || country.includes('Taiwan')) {
+    } else if (country.includes('台灣') || country.includes('台湾') || country.includes('Taiwan') || country === 'TW') {
       // Generate Taiwan ID Card: Format: A123456789
       // 1st: letter (birthplace), 2nd: gender (1=Male, 2=Female), 3rd-9th: sequence
       const letters = 'ABCDEFGHJKLMNPQRSTUVXY';
@@ -1183,7 +1184,7 @@ export async function generateIdentityInfo(address) {
       const genderDigit = isMaleForIdentity ? '1' : '2'; // 1=男, 2=女
       const sequenceDigits = randomInt(10000000, 99999999).toString();
       ssn = `${firstLetter}${genderDigit}${sequenceDigits}`;
-    } else if (country.includes('新加坡') || country.includes('Singapore')) {
+    } else if (country.includes('新加坡') || country.includes('Singapore') || country === 'SG') {
       // Generate Singapore NRIC: Format: S1234567D (prefix + 7 digits + check letter)
       // S=citizen pre-2000, T=citizen 2000+, G/F=PR. Prefix should match birth year
       let prefix;
@@ -1204,7 +1205,7 @@ export async function generateIdentityInfo(address) {
       // Default: US SSN format (XXX-XX-XXXX)
       // SSN Area Number (first 3 digits) should match the state if available
       let ssnAreaNumber;
-      if (address.stateCode && address.country === '美国') {
+      if (address.stateCode && (address.country === '美国' || address.country === 'US')) {
         try {
           const usData = await loadData('data/usData.json');
           const state = usData.states[address.stateCode];
